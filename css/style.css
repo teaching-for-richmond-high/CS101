@@ -1,0 +1,268 @@
+* {
+	margin: 0;
+	padding-top: 0;
+}
+.lecture a {
+	text-decoration: none;
+	color: #FFF;
+}
+.lecture a:hover {
+	border-bottom: 1px solid #FFF;
+}
+.lecture a:active {
+	color: red;
+}
+.hw_and_projects a {
+	text-decoration: none;
+	color: #FFF;
+}
+.hw_and_projects a:hover {
+	border-bottom: 1px solid #FFF;
+}
+.hw_and_projects a:active {
+	color: red;
+}
+.lab_discussion_links a {
+	text-decoration: none;
+	color: #FFF;
+}
+.lab_discussion_links a:hover {
+	border-bottom: 1px solid #FFF;
+}
+.lab_discussion_links a:active {
+	color: red;
+}
+body {
+	background-image: url(../static/edgy.jpg);
+	background-size: cover;
+}
+
+body ul {
+	font-family: arial;
+	list-style: none;
+	color: #FFF;
+	padding: 0px 50px 0px 20px;
+}
+body ul li {
+	padding: 0px 0px 0px 0px;
+}
+
+nav {
+	width: 100%;
+	height: 60px;
+	background-color: #000;
+}
+
+nav p {
+	font-family: arial;
+	color: #FFF;
+	font-size: 24px;
+	line-height: 55px;
+	float: left;
+	padding: 0px 20px;
+}
+
+nav ul {
+	float:left;
+}
+
+nav ul li a:hover {
+	color: red;
+}
+
+
+nav ul li {
+	float: left;
+	list-style: none;
+	position: relative;
+}
+
+nav ul li a {
+	display: block;
+	font-family: arial;
+	color: #FFF;
+	font-size: 14px;
+	padding: 22px 14px;
+	text-decoration: none;
+
+}
+
+nav ul li ul {
+	display: none;
+	position: absolute;
+	background-color: #000;
+	padding: 10px;
+	border-radius: 0px 0px 4px 4px;
+}
+
+nav ul li:hover ul {
+	display: block;
+}
+
+nav ul li ul li {
+	width: 180px;
+	border-radius: 4px;
+}
+
+nav ul li ul li a {
+	padding: 8px 14px;
+}
+
+nav ul li ul li a:hover {
+	color: red;
+}
+
+.table {
+	padding:100px 0px 1000px 0px;
+}
+
+.table_column {
+	font-family:arial;
+	list-style:none;
+	padding:0px 30px 0px 90px;
+	float: left;
+	width:100%;
+	font-weight: bold;
+}
+
+.header_week {
+	font-family:arial;
+	list-style: none;
+	padding: 0px 0px 30px 0px;
+	background: #DCDCDC;
+	float: left;
+	width:5%;
+	text-align: center;
+	color: #000;
+	margin: 1px;
+}
+.header_date {
+	font-family:arial;
+	list-style: none;
+	padding: 0px 0px 30px 0px;
+	color: #000;
+	background: #DCDCDC;
+	float: left;
+	width:5%;
+	text-align: center;
+	margin: 1px;
+}
+.header_lecture {
+	font-family:arial;
+	list-style: none;
+	padding: 0px 0px 30px 0px;
+	color: #000;
+	background: #DCDCDC;
+	float: left;
+	width:20%;
+	text-align: center;
+	margin: 1px;
+}
+.header_textbook {
+	font-family:arial;
+	list-style: none;
+	padding: 0px 0px 30px 0px;
+	color: #000;
+	background: #DCDCDC;
+	float: left;
+	width:11%;
+	text-align: center;
+	margin: 1px;
+}
+.header_lab_discussion_links {
+	font-family:arial;
+	list-style: none;
+	padding: 0px 0px 30px 0px;
+	color: #000;
+	background: #DCDCDC;
+	float: left;
+	width:21%;
+	text-align: center;
+	margin: 1px;
+}
+.header_hw_and_projects {
+	font-family:arial;
+	list-style: none;
+	padding: 0px 0px 30px 0px;
+	color: #000;
+	background: #DCDCDC;
+	float: left;
+	width:21%;
+	text-align: center;
+	margin: 1px;
+}
+
+.week {
+	font-family:arial;
+	list-style: none;
+	padding: 0px 0px 30px 0px;
+	background: #666;
+	float: left;
+	width:5%;
+	text-align: center;
+	color: #FFF;
+	margin: 1px;
+}
+.date {
+	font-family:arial;
+	list-style: none;
+	padding: 0px 0px 30px 0px;
+	color: #FFF;
+	background: #666;
+	float: left;
+	width:5%;
+	text-align: center;
+	margin: 1px;
+}
+.lecture {
+	font-family:arial;
+	list-style: none;
+	padding: 0px 0px 30px 0px;
+	color: #FFF;
+	background: #666;
+	float: left;
+	width:20%;
+	text-align: center;
+	margin: 1px;
+}
+.textbook {
+	font-family:arial;
+	list-style: none;
+	padding: 0px 0px 30px 0px;
+	color: #FFF;
+	background: #666;
+	float: left;
+	width:11%;
+	text-align: center;
+	margin: 1px;
+}
+.lab_discussion_links {
+	font-family:arial;
+	list-style: none;
+	padding: 0px 0px 30px 0px;
+	color: #FFF;
+	background: #666;
+	float: left;
+	width:21%;
+	text-align: center;
+	margin: 1px;
+}
+.hw_and_projects {
+	font-family:arial;
+	list-style: none;
+	padding: 0px 0px 30px 0px;
+	color: #FFF;
+	background: #666;
+	float: left;
+	width:21%;
+	text-align: center;
+	margin: 1px;
+}
+
+footer {
+	font-family: arial;
+	color: #FFF;
+	background:#000;
+	clear: both;
+}
+
