@@ -1,6 +1,6 @@
 #Problem 1 
 def fibonacci(n):
-	"""Return the nth number in the fibonacci sequence.
+	"""Return the nth number in the fibonacci sequence using iteration.
 
 	>>>fibonacci(1) #the first and second numbers of the fibonacci sequence are always 1
 	1
