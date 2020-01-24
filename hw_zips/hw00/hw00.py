@@ -1,10 +1,7 @@
 #Problem 1
 def add(x,y):
 	"""return the sum of x and y."""
-
-
-	return x + y
-
+	"***YOUR CODE HERE***"
 
 
 def sub(x,y):
@@ -20,15 +17,19 @@ def div(x,y):
 	"***YOUR CODE HERE***"
 
 #Problem 2
-def quick_math_one(x,y):
+def quick_math_one():
 	"""Using the arithmetic functions you just made, compute
-	((4+(4*6))*(3+5))
+	((4+(4*6))*(3+5)). 
 	"""
+	"***YOUR CODE HERE***"
 
-def quick_math_two(x,y):
+
+def quick_math_two():
 	"""Using the arithmetic functions you just made, compute
 	((5*(4/2))*((84/4)+9))
 	"""
+	"***YOUR CODE HERE***"
+
 #Problem 3
 def a_plus_abs_b(a,b):
 	"""Return a+abs(b), but without calling abs.
@@ -37,6 +38,8 @@ def a_plus_abs_b(a,b):
 	>>> a_plus_abs_b(2,-3)
 	5
 	"""
+	"***YOUR CODE HERE***"
+
 #Problem 4
 def two_of_three(a,b,c):
 	"""Return x*x + y*y, where x and y are the two largest numbers of the 
@@ -51,6 +54,7 @@ def two_of_three(a,b,c):
 	50
 	"""
 	"***YOUR CODE HERE***"
+	
 #Problem 5
 def if_function(condition, true_result, false_result):
 	"""Return true_result if condition is a true value, and false_result otherwise."""

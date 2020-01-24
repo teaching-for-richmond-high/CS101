@@ -258,6 +258,38 @@ nav ul li ul li a:hover {
 	text-align: center;
 	margin: 1px;
 }
+.staff {
+	font-family: arial;
+	list-style: none;
+	color: #FFF;
+	text-align: center;
+	font-size: 40px;
+}
+.teacher {
+	background-color: #000;
+	color: #FFF;
+	font-family: arial;
+	text-align: center;
+	justify-content: center;
+	font-size: 30px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.teacher_text {
+	color: #FFF;
+	font-family: arial;
+	font-size: 20px;
+}
+.nate_picture {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.space {
+	margin: 60px;
+	height: 100%;
+}
 
 footer {
 	font-family: arial;
