@@ -22,20 +22,100 @@
 	</nav>
 	<header>Lab 0: Workflow and Python Basics</header>
 	<div class="main">
-		<p1><i>Due by Mon 1/6</i></p1>
-		<p>Starter Files</p>
-		<p2>Download <a href="../lab_zips/lab00.zip" download>lab00.zip</a>. Inside the archive, you will find starter files for the questions in this lab, along with a copy of the test files.</p2>
-		<p><br>Submission</p>
-		<p2>By the end of this lab, you should have submitted the lab with git. You may submit more than once, but only the final submission will be graded. Check that you have successfully submitted your code on git.</p2>
 		<p><br>Introduction</p>
 		<p2><br>This lab explains how to use your own computer to complete assignments for CS 61A, as well as introduce some of the basics of Python. If you are using a lab computer, most of the instructions are the same, except you won't have to install anything.<br><br>If you need any help at any time through the lab, please feel free to come to one of the TAs.<br><br>This lab looks really long, but it's mostly setup and learning how to use essential tools for this class; these may seem a bit difficult now, but it will quickly become second nature as we move further into the course.</p2>
 		<p>Setup</p>
+		<p>Install a terminal</p>
+		<p2><br>The terminal is a program that allows you to interact with your computer by entering commands. No matter what operating system you use (Windows, macOS, Linux), the terminal will be an essential tool for coding.
+		<p>macOS/Linux</p>
+		<p2><br>If you're on a Mac or are using a form of Linux (such as Ubuntu), you already have a program called Terminal or something similar on your computer. Open that up and you should be good to go.
+		<p>Windows</p>
+		<p2><br>For Windows users, we recommend a terminal called <b>Git-Bash</b>. You can try either method below:
+		<br>
+        <br><b>Easy (automatic) method</b>: Download and run our <a href="../static/Install-Python-on-Windows.jse" download>automatic installer</a>, and follow the displayed instructions.
+        <br><i>(Advanced users)</i>: If double-clicking doesn't work, you can try <b>cscript "Install-Python-on-Windows.jse"</b> from the Command Prompt.)
+		If this method <b>succeeds</b>, you can move on and install a text editor; you now run Python inside Git-Bash. (In fact, <i>only</i> inside Git-Bash. So this <i>won't</i> let you run .py files by double-clicking them. But you shouldn't need to do that for this course.)
+		If this method <b>fails</b>, try the alternate method below.
+		<i>Anti-virus note:</i> Some anti-viruses mistakenly flag our installer as a virus. We're aware of this, but there's little we can do to prevent it.
+		In the case of Windows Defender, some students have reported success by clicking "See Details", letting it scan the file, and then rebooting.
+		Otherwise, you can try to exclude/whitelist the file from scanning.
+		If neither of these work for you or you aren't comfortable messing with your anti-virus software, you can just use the manual installation method below.
+		<br>
+		<br><b>Alternate (manual) method</b>:
+		First, if you already tried the automatic installer above, make sure it's fully cleaned up:
+		<br>
+		<br>1. Look for <i>Git</i> as an installed program in "Add/Remove Programs", and, if it exists, uninstall it.
+		<br>2. Once Git is no longer installed, if a <b>C:\Program Files\Git</b> folder still exists, delete that too.
+		Now download and install <a href="https://git-scm.com/download/win" target="_blank">Git Bash</a>. You can use the default options, <b>with one exception</b>:
+		Select <b><i>Use Windows' default console window</i></b> in the <i>Configuring the terminal emulator to use with Git Bash</i> step.
+		<b>This is very important! If you do not select this option, your terminal won't work with Python!</b>
+		<br>
+		<img src="../static/gitsetup.png"/>
+		<br><i>If you're already using Git-Bash from outside this course and reinstalling it isn't an option:</i>
+		<br>Depending on whether you selected the MinTTY option when installing Git, it's possible that typing a command like python won't display anything on the screen. You can fix this by typing winpty python instead (or winpty python3, etc. as described below), but it will be painful, as you will have to remember to do this every time for the rest of the course! Hence we recommend that you go back and reinstall Git-Bash with the recommended options if at all possible.
+		<br>
+		<br>If everything succeeded, you are now able to launch a terminal on Windows by running Git-Bash.
+		<br>
+		<br><b>SSL/TLS errors</b>: If you ran into connection security errors, you may need to update your system and/or enable TLS 1.2 (e.g. see here for Windows 7). You can check your TLS version by installing Python first, and running the following in python3:
+		from json import loads; from urllib.request import urlopen;
+		loads(urlopen('https://www.howsmyssl.com/a/check').read().decode('UTF-8'))['tls_version']
+		If you don't see TLS 1.2 or later, that may be why you are encountering problems.
+		If you're on Windows 10, though, the problem may be something else, and you may need to search/ask for help.
+		<p>Install Python3</p>
+		<p2><br>Python 3 is the primary programming language used in this course. Use the instructions below to install the Python 3 interpreter.
+		<br>(The instructions may feature older versions of Python 3, but the steps are similar.)
+		<br>
+		<p>Linux</p>
+		<p2><br> Run <b>sudo apt install python3</b> (Ubuntu), <b>sudo pacman -S python3</b> (Arch), or the command for your distro.
+		<br>
+		<p>macOS</p>
+		<p2><br>Download and install Python: for Windows <a href="../static/python-3.8.1-amd64.exe" download>click here</a>, for Mac or Linux <a href="https://www.python.org/downloads/" target="_blank">click here</a>.
+		Refer to this <a href="https://www.youtube.com/watch?v=smHuBHxJdK8"target="_blank">video</a> for additional help on setting up Python.
+		<br>
+		<br>You may need to right-click the download icon and select "Open". After installing please close and open your Terminal.
+		<br>
+		<p>Windows</p>
+		<p2><br>If you used our automated instaler successfuly, skip to the next section-you should already have Python.
+		<br>
+		<p2><br>Otherwise, if you're installing manually, download Python and <b>make sure to check the "Add Python 3.x to PATH" box,</b> which will allow you to execute the python command from your terminal.
+		<br>
+		<p2><br>After installing please close and open your Terminal.
+		<img src="../static/python-windows.png"/>
+		<br>
+		<p>Install a text editor</p>
+		<p2><br>The <b>Python interpreter</b> that you just installed allows you to <i>run</i> Python code. You will also need a <b>text editor,</b> where you will <i>write</i> Python code.
+		<br>
+		<p2><br>There are many editors out there, each with its own set of features. We find that <a href="https://atom.io/" target="_blank">Atom</a> and <a href="http://www.sublimetext.com/3" target="_blank">Sublime Text 3</a> are popular choices among students, but you are free to use other text editors.
+		<br>
+		<p>Using the terminal</p>
+		<p2><br>Let's check if everything was installed properly!
+		<br>First, open a terminal window. (If you're on Windows, launch <i>Git-Bash</i> from the Start menu.)
+		<br><b>Important:</b> You should see a $ sign, waiting for you to type commands.
+		<br>If you see a > sign (such as C:\Users\Oski>), you are <b>not</b> running Bash; you are in the Windows Command Prompt! Do not use that! Close it, and launch Git-Bash instead. (Do <i>not</i> launch Git-CMD.)
+		<img src="../static/terminal.png"/>
+		<br>
+		<p2><br> When you first open your terminal, you will start in the <b>home directory</b>. The home directory is represented by the ~ symbol.
+		<br>
+		Don't worry if your terminal window doesn't look exactly the same; the important part is that the text on the left-hand side of the $ has a ~ (tilde). That text might also have the name of your computer. <b>If you see your home directory instead of ~:</b> Try running echo ~. If it displays the same path, that's also fine.
+		<br>
+		<p>Python Interpreter</p>
+		<p2><br>We can use the terminal to check if your Python 3 interpreter was installed correctly. Try the following command: <i>python3</i>
+		<br>If the installation worked, you should see some text printed out about the interpreter followed by >>> on its own line. This is where you can type in Python code. Try typing some expressions you saw in lecture, or just play around to see what happens! You can type exit() or Ctrl-D to return to your command line. Remember to ask for help if you run into trouble!
+		<br>
+		<p>Conclusion</p>
+		<p2><br>Congratulations! You have officially setup your own personal coding environment! Now next time in class, we will go into learning terminal commands and how to use the text editor with our terminal!
 
-		<p2><br><b>Problem 1: Basic Arithmetic Functions</b></p2>
-		<p2><br>Fill in the missing code for the functions add(),sub(),mul() and div(). <br>Run test_basic_arithmetic.py to test your code.</p2>
 
-		<p2><br><br><b>Problem 2: Quick Maths</b></p2>
-		<p2><br>Using the functions that you just implemented, fill in the missing blanks to solve the two following arithmetic equations quick_maths_one and quick_maths_two. <br>Run test_quick_maths.py to test your code.</p2>
+
+
+
+
+
+
+
+
+
+
 
 
 	</div>
